@@ -180,7 +180,7 @@ public interface CryptoMaterialsCache {
 
         @Override public boolean equals(Object o) {
             if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (getClass() != o.getClass()) return false;
             UsageStats that = (UsageStats) o;
             return getBytesEncrypted() == that.getBytesEncrypted() &&
                     getMessagesEncrypted() == that.getMessagesEncrypted();
