@@ -198,7 +198,7 @@ public class LocalCryptoMaterialsCache implements CryptoMaterialsCache {
      * Removes an entry from the cache.
      * @param e the entry to remove
      */
-    private synchronized void removeEntry(BaseEntry e) {
+    private void removeEntry(BaseEntry e) {
         expirationQueue.remove(e);
         // This does not update the LRU if the value does not match
         cacheMap.remove(e.identifier_, e);
